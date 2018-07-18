@@ -16,31 +16,39 @@ import { MatToolbarModule, MatMenuModule, MatButtonModule } from '@angular/mater
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestComponent } from './test/test.component';
 
+import { AppRoutingModule } from './app.routing.module';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    TestComponent,
-  ],
-  imports: [
-    BrowserModule.withServerTransition({appId: 'gdg-poa'}),
-    RouterModule.forRoot([
-      {path: '', component: HomeComponent, pathMatch: 'full'},
-      {path: 'test', component: TestComponent},
-      {path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
-      {path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
-    ]),
-    TransferHttpCacheModule,
-    MatToolbarModule,
-    MatMenuModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
-  ],
-  providers: [AngularFireStorage],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+      TestComponent,
+      AboutUsComponent,
+      ScheduleComponent,
+      ContactComponent,
+
+    ],
+    imports: [
+        BrowserModule.withServerTransition({appId: 'gdg-poa'}),
+        RouterModule.forRoot([
+            {path: '', component: HomeComponent, pathMatch: 'full'},
+            {path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
+            {path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
+        ]),
+        TransferHttpCacheModule,
+        MatToolbarModule,
+        MatMenuModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+      AppRoutingModule,
+      AngularFireModule.initializeApp(environment.firebase),
+      AngularFirestoreModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
