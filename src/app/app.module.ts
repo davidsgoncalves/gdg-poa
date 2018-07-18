@@ -29,7 +29,6 @@ import { ContactComponent } from './contact/contact.component';
     AboutUsComponent,
     ScheduleComponent,
     ContactComponent,
-  
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'gdg-poa' }),
