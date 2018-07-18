@@ -22,33 +22,33 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HomeComponent,
-      TestComponent,
-      AboutUsComponent,
-      ScheduleComponent,
-      ContactComponent,
-
-    ],
-    imports: [
-        BrowserModule.withServerTransition({appId: 'gdg-poa'}),
-        RouterModule.forRoot([
-            {path: '', component: HomeComponent, pathMatch: 'full'},
-            {path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
-            {path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
-        ]),
-        TransferHttpCacheModule,
-        MatToolbarModule,
-        MatMenuModule,
-        BrowserAnimationsModule,
-        MatButtonModule,
-      AppRoutingModule,
-      AngularFireModule.initializeApp(environment.firebase),
-      AngularFirestoreModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    TestComponent,
+    AboutUsComponent,
+    ScheduleComponent,
+    ContactComponent,
+  
+  ],
+  imports: [
+    BrowserModule.withServerTransition({ appId: 'gdg-poa' }),
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule' },
+      { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule' }
+    ]),
+    TransferHttpCacheModule,
+    MatToolbarModule,
+    MatMenuModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
+  ],
+  providers: [AngularFireStorage],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

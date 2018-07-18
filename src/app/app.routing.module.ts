@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ContactComponent } from './contact/contact.component';
+import { TestComponent } from './test/test.component';
 
 
 const appRoutes: Routes = [
@@ -19,6 +20,9 @@ const appRoutes: Routes = [
   },
   { path: 'contato',
     component: ContactComponent
+  },
+  { path: 'test',
+    component: TestComponent
   },
   { path: '', pathMatch: 'full', redirectTo: 'HomeComponent' }
 ];
