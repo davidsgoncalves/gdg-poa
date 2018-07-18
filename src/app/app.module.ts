@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireStorage, AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
@@ -38,7 +39,7 @@ import { TestComponent } from './test/test.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],
-  providers: [],
+  providers: [AngularFireStorage],
   bootstrap: [AppComponent]
 })
 export class AppModule {
