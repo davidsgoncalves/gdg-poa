@@ -20,6 +20,9 @@ import { AppRoutingModule } from './app.routing.module';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ContactComponent } from './contact/contact.component';
+import { AuthService } from './providers/auth.service.ts.service';
+import { LoginTestComponent } from './login-test/login-test.component';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { ContactComponent } from './contact/contact.component';
     AboutUsComponent,
     ScheduleComponent,
     ContactComponent,
+    LoginTestComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'gdg-poa' }),
@@ -46,7 +50,7 @@ import { ContactComponent } from './contact/contact.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],
-  providers: [AngularFireStorage],
+  providers: [AngularFireStorage, AngularFireAuth, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
