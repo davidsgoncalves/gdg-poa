@@ -20,7 +20,15 @@ import { auth } from 'firebase';
 export class LoginTestComponent {
   
   constructor(public afAuth: AngularFireAuth) {
+    // let user = this.afAuth.auth.currentUser;
+    //
+    // if (user !== null && user.getIdToken() === 'nosso id') {
+    //   // go the admin
+    // } else {
+    //   // go the home
+    // }
   }
+
   login() {
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
