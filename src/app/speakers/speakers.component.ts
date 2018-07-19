@@ -2,20 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 
 @Component({
-  selector: 'app-about-us',
-  templateUrl: './about-us.component.html',
+  selector: 'app-speakers',
+  templateUrl: './speakers.component.html',
   styles: []
 })
-export class AboutUsComponent implements OnInit {
-
-  organizers: any;
-
+export class SpeakersComponent implements OnInit {
+  
+  speakers: any;
   constructor(
     private db: AngularFirestore,
   ) { }
-
+  
   ngOnInit() {
-    this.organizers = this.db.collection('organizer').valueChanges();
+    this.speakers = this.db.collection('speaker').valueChanges();
   }
-
 }

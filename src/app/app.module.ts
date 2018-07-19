@@ -22,6 +22,7 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginTestComponent } from './login-test/login-test.component';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { SpeakersComponent } from './speakers/speakers.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
     ScheduleComponent,
     ContactComponent,
     LoginTestComponent,
+    SpeakersComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'gdg-poa' }),

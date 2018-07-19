@@ -1,19 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 @Component({
   selector: 'app-schedule',
-  template: `
-    <p>
-      schedule works!
-    </p>
-  `,
+  templateUrl: './schedule.component.html',
   styles: []
 })
 export class ScheduleComponent implements OnInit {
 
-  constructor() { }
+  schedules: any;
+
+  constructor(
+    private db: AngularFirestore,
+  ) { }
 
   ngOnInit() {
+    this.schedules = this.db.collection('schedule').valueChanges();
   }
 
 }

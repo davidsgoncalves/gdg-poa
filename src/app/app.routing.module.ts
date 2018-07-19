@@ -7,6 +7,7 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { ContactComponent } from './contact/contact.component';
 import { TestComponent } from './test/test.component';
 import { LoginTestComponent } from './login-test/login-test.component';
+import { SpeakersComponent } from './speakers/speakers.component';
 
 
 const appRoutes: Routes = [
@@ -27,6 +28,9 @@ const appRoutes: Routes = [
   },
   { path: 'test-login',
     component: LoginTestComponent
+  },
+  { path: 'palestrantes',
+    component: SpeakersComponent
   },
   { path: '', pathMatch: 'full', redirectTo: 'HomeComponent' }
 ];
