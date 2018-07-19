@@ -20,7 +20,6 @@ import { AppRoutingModule } from './app.routing.module';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ContactComponent } from './contact/contact.component';
-import { AuthService } from './providers/auth.service.ts.service';
 import { LoginTestComponent } from './login-test/login-test.component';
 import { AngularFireAuth } from 'angularfire2/auth';
 
@@ -50,7 +49,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],
-  providers: [AngularFireStorage, AngularFireAuth, AuthService],
+  providers: [AngularFireStorage, AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule {
